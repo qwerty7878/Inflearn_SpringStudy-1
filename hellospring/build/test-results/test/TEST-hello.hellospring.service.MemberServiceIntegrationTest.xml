@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.hellospring.service.MemberServiceIntegrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-18T16:29:38" hostname="aaaa.local" time="0.896">
+  <properties/>
+  <testcase name="중복_회원_예외()" classname="hello.hellospring.service.MemberServiceIntegrationTest" time="0.867"/>
+  <testcase name="회원가입()" classname="hello.hellospring.service.MemberServiceIntegrationTest" time="0.026"/>
+  <system-out><![CDATA[01:29:35.595 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hello.hellospring.service.MemberServiceIntegrationTest]: MemberServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:29:35.656 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hello.hellospring.HellospringApplication for test class hello.hellospring.service.MemberServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2024-09-19T01:29:35.943+09:00  INFO 24713 --- [hellospring] [    Test worker] h.h.s.MemberServiceIntegrationTest       : Starting MemberServiceIntegrationTest using Java 22.0.2 with PID 24713 (started by annhyeonjune in /Users/annhyeonjune/Downloads/hellospring)
+2024-09-19T01:29:35.944+09:00  INFO 24713 --- [hellospring] [    Test worker] h.h.s.MemberServiceIntegrationTest       : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T01:29:36.586+09:00  INFO 24713 --- [hellospring] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T01:29:36.620+09:00  INFO 24713 --- [hellospring] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2024-09-19T01:29:36.903+09:00  INFO 24713 --- [hellospring] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T01:29:36.933+09:00  INFO 24713 --- [hellospring] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T01:29:36.952+09:00  INFO 24713 --- [hellospring] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T01:29:37.155+09:00  INFO 24713 --- [hellospring] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T01:29:37.172+09:00  INFO 24713 --- [hellospring] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T01:29:37.230+09:00  INFO 24713 --- [hellospring] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/test user=SA
+2024-09-19T01:29:37.231+09:00  INFO 24713 --- [hellospring] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T01:29:37.745+09:00  INFO 24713 --- [hellospring] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T01:29:37.746+09:00  INFO 24713 --- [hellospring] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T01:29:38.029+09:00  WARN 24713 --- [hellospring] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T01:29:38.046+09:00  INFO 24713 --- [hellospring] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-09-19T01:29:38.305+09:00  INFO 24713 --- [hellospring] [    Test worker] h.h.s.MemberServiceIntegrationTest       : Started MemberServiceIntegrationTest in 2.566 seconds (process running for 3.301)
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.name=?
+Hibernate: insert into member (name,id) values (?,default)
+join = 283ms
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.name=?
+join = 8ms
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.name=?
+Hibernate: insert into member (name,id) values (?,default)
+join = 6ms
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/annhyeonjune/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
