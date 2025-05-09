@@ -24,7 +24,7 @@ public class helloController {
 
     @GetMapping("hello-string")
     @ResponseBody
-    //  http에 바로 응답을 돌림 없다면? 맞는 html을 찾아서 돌림
+    //  http에 바로 응답을 돌림 없다면? 맞는 html을 찾아서 돌린다
     // 응답 바디 부분에 내가 직접 넣어주겠다
     // html 태그 사용 x
     public String helloString(@RequestParam("name") String name) {
